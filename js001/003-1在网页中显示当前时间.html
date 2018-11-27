@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#time{
+				font-size: 100px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="time">00:00:00</h1>
+		<script type="text/javascript">
+			var time = document.querySelector('#time');
+			
+			setInterval(function(){
+				//实例化时间now 	
+				var now = new Date();
+				//时分秒
+				var h = now.getHours();
+				var m = now.getMinutes();
+				var s = now.getSeconds();
+				//格式化数据显示成00：00：00格式
+				h = h < 10 ? ('0' + h) : h;
+				m = m < 10 ? ('0' + m) : m;
+				s = s < 10 ? ('0' + s) : s;
+				//网页上显示
+				time.innerText = h + ':' + m + ':' + s;
+			},1000);
+			
+		</script>
+	</body>
+</html>

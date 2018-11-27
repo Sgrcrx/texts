@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas {
+				width: 400px;
+				height: 400px;
+				border: solid 1px red;
+				margin: 50px auto;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="400" height="400"></canvas>
+		<script type="text/javascript">
+			// 获取画布
+			var canvas = document.querySelector("#canvas");
+			// 获取绘图上下文  画笔
+			var ctx = canvas.getContext("2d");
+			// 星期
+			var week = ['日','一','二','三','四','五','六'];
+			// 改变坐标原点
+			ctx.translate(200,200);
+			ctx.lineCap ='round';
+			// 设置文字样式
+			ctx.font = "bold 16px '微软雅黑'";
+			ctx.textAlign = "center";
+			ctx.textBaseline = "middle";
+			
+		</script>
+	</body>
+</html>
